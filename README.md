@@ -2,7 +2,7 @@
 # pyhtmlchart
 pyhtmlchart is a Python library to make Google Charts.
 
-[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+![https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
 [![PyPI Latest Release](https://img.shields.io/pypi/v/pyhtmlchart.svg)](https://pypi.org/project/pyhtmlchart/)
 [![Package Status](https://img.shields.io/pypi/status/pyhtmlchart.svg)](https://pypi.org/project/pyhtmlchart/)
