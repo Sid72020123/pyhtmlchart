@@ -8,7 +8,8 @@ import time
 class Table:
     def __init__(self, location, title='Table', table_border=5, border_color='Black', cell_padding=3, cell_spacing=0,
                  cell_horizontal_text_align='center', cell_vertical_text_align='middle', column_bg_color='Yellow',
-                 data_bg_color='White', column_text_color='Black', data_text_color='Black', print_log=False):
+                 data_bg_color='White', column_text_color='Black', data_text_color='Black', print_log=False,
+                 font="sans serif"):
         """
         Class to Create a Table from given data.
         :param location: The location of the table to be stored as a '.html' file.
@@ -24,6 +25,7 @@ class Table:
         :param column_text_color: The text color of the column.
         :param data_text_color: The text color of the data.
         :param print_log: Set it to 'True' to see the log of making of the table.
+        :param font: The font of the table.
         """
         self.location = location
         self.title = title
@@ -43,6 +45,7 @@ class Table:
         self.update_time = 5000
         self.wait = True
         self.print_log = print_log
+        self.font = font
 
     def add_data(self, data, columns):
         """
@@ -55,7 +58,8 @@ class Table:
         if self.print_log:
             print(f"'{self.title}': Creating Table.....")
         file = open(f'{self.location}.html', 'w')
-        file.write(f"<html>\n<head>\n<title>\n{self.title}\n</title>\n</head>\n<body>\n<center><h1>{self.title}</h1>\n")
+        file.write(
+            f"<html>\n<head>\n<title>\n{self.title}\n</title>\n</head>\n<body style='font-family:{self.font};'>\n<center><h1>{self.title}</h1>\n")
         file.write(
             f"<table border = '{self.table_border}' BorderColor='{self.border_color}' cellpadding='{self.cell_padding}' cellspacing='{self.cell_spacing}'>\n")
         file.write(
@@ -90,7 +94,7 @@ class Table:
             print(f"'{self.title}': Enabling Auto Update.....")
         file = open(f'{self.location}.html', 'w')
         file.write(
-            f"<html>\n<head>\n<title>\n{self.title}\n</title>\n</head>\n<body onload='AutoRefresh({self.update_time})'>\n<center><h1>{self.title}</h1>\n")
+            f"<html>\n<head>\n<title>\n{self.title}\n</title>\n</head>\n<body style='font-family:{self.font};' onload='AutoRefresh({self.update_time})'>\n<center><h1>{self.title}</h1>\n")
         file.write(
             f"<table border = '{self.table_border}' BorderColor='{self.border_color}' cellpadding='{self.cell_padding}' cellspacing='{self.cell_spacing}'>\n")
         file.write(
@@ -123,7 +127,8 @@ class Table:
         if self.print_log:
             print(f"'{self.title}': Disabling Auto Update.....")
         file = open(f'{self.location}.html', 'w')
-        file.write(f"<html>\n<head>\n<title>\n{self.title}\n</title>\n</head>\n<body>\n<center><h1>{self.title}</h1>\n")
+        file.write(
+            f"<html>\n<head>\n<title>\n{self.title}\n</title>\n</head>\n<body style='font-family:{self.font};'>\n<center><h1>{self.title}</h1>\n")
         file.write(
             f"<table border = '{self.table_border}' BorderColor='{self.border_color}' cellpadding='{self.cell_padding}' cellspacing='{self.cell_spacing}'>\n")
         file.write(
@@ -164,7 +169,7 @@ class Table:
             time.sleep(self.update_time / 1000)
         file = open(f'{self.location}.html', 'w')
         file.write(
-            f"<html>\n<head>\n<title>\n{self.title}\n</title>\n</head>\n<body onload='AutoRefresh({self.update_time})'>\n<center><h1>{self.title}</h1>\n")
+            f"<html>\n<head>\n<title>\n{self.title}\n</title>\n</head>\n<body style='font-family:{self.font};' onload='AutoRefresh({self.update_time})'>\n<center><h1>{self.title}</h1>\n")
         file.write(
             f"<table border = '{self.table_border}' BorderColor='{self.border_color}' cellpadding='{self.cell_padding}' cellspacing='{self.cell_spacing}'>\n")
         file.write(

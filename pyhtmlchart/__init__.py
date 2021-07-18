@@ -1,5 +1,9 @@
-"""
-A Python module to make Google Charts. This module is made by Siddhesh Chavan! The module's version is 1.0!
+__name__ = "pyhtmlchart"
+__version__ = "1.1"
+__developer__ = "Siddhesh Chavan"
+__documentation__ = "https://sid72020123.github.io/pyhtmlchart/"
+__doc__ = """
+A Python module to make Google Charts. This module is made by Siddhesh Chavan!
 This module can create a Line chart, Column Chart, Area Chart, Bar Chart, Pie Chart, Table and multiple charts.
 Import Statement:
     import pyhtmlchart
@@ -21,6 +25,7 @@ History:
     05/06/2021(v0.9.8) --> Added 'background_color' property to all the charts.
     06/06/2021(v0.9.9) --> Updated 'multiple_chart' package.
     13/06/2021(v1.0) --> First Release!
+    18/07/2021(v1.1) --> Updated the tables Class.
 Credits:
     All code credits to Siddhesh Chavan
     Special thanks to Google Charts.
@@ -32,6 +37,7 @@ Information:
     Scratch Account:- @Sid72020123 (Link: https://scratch.mit.edu/users/Sid72020123/)
     My self-made Website: https://Sid72020123.github.io/
 """
+
 import pyhtmlchart.line_chart
 import pyhtmlchart.column_chart
 import pyhtmlchart.area_chart
@@ -40,8 +46,4 @@ import pyhtmlchart.pie_chart
 import pyhtmlchart.table
 import pyhtmlchart.multiple_charts
 
-__name__ = "pyhtmlchart"
-__version__ = 1.0
-__documentation__ = "https://sid72020123.github.io/pyhtmlchart/"
-__developer__ = "Siddhesh Chavan"
 print(f"{__name__} v{__version__} - {__documentation__}")
